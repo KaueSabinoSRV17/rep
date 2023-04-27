@@ -1,9 +1,13 @@
 package main
 
 import (
-  "fmt"
+	"fmt"
+	"os"
+	"strings"
 )
 
 func main() {
-  fmt.Println("Hello World!")
+  string, textToBeReplaced, replacementText := os.Args[1], os.Args[2], os.Args[3]
+  result := strings.ReplaceAll(string, textToBeReplaced, replacementText)
+  fmt.Println(result)
 }
